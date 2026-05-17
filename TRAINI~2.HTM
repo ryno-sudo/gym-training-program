@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1a4d3a">
+<title>12-Week Training Program — Recomp</title>
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  line-height: 1.55;
+  color: #1a1a1a;
+  background: #f5f1ea;
+  font-size: 16px;
+  padding-bottom: 80px;
+}
+nav {
+  position: sticky; top: 0; background: #1a4d3a; color: #fff; z-index: 100;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15); overflow-x: auto; white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+nav .nav-inner { display: flex; padding: 0 8px; min-width: max-content; }
+nav a {
+  color: #fff; text-decoration: none; padding: 14px 14px; font-size: 14px;
+  font-weight: 500; display: inline-block;
+}
+nav a:active { background: #133829; }
+header {
+  padding: 24px 18px 20px;
+  background: linear-gradient(180deg, #1a4d3a 0%, #2a6b54 100%); color: #fff;
+}
+header h1 { font-size: 22px; font-weight: 700; line-height: 1.2; margin-bottom: 6px; }
+header .sub { font-size: 14px; opacity: 0.9; }
+main { padding: 18px; max-width: 900px; margin: 0 auto; }
+section { margin-bottom: 28px; }
+h2 {
+  font-size: 19px; color: #1a4d3a; border-bottom: 2px solid #1a4d3a;
+  padding-bottom: 6px; margin-bottom: 14px; margin-top: 8px;
+}
+h3 { font-size: 16px; color: #1a4d3a; margin: 16px 0 8px; }
+h4 { font-size: 15px; color: #2a6b54; margin: 12px 0 6px; }
+p { margin-bottom: 10px; }
+ul, ol { margin: 6px 0 12px 20px; }
+li { margin-bottom: 4px; }
+strong { color: #1a4d3a; }
+.callout {
+  background: #fff3cd; border-left: 4px solid #d4a82f;
+  padding: 12px 14px; border-radius: 4px; margin: 12px 0; font-size: 14px;
+}
+.callout-red { background: #fde8e8; border-left-color: #c0392b; }
+.callout-blue { background: #e8f4fd; border-left-color: #2a6b9b; }
+table {
+  width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 13px;
+  background: #fff; border-radius: 6px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+th, td { padding: 8px 10px; text-align: left; border-bottom: 1px solid #e8e3da; vertical-align: top; }
+th {
+  background: #1a4d3a; color: #fff; font-weight: 600; font-size: 12px;
+  text-transform: uppercase; letter-spacing: 0.4px;
+}
+tr:last-child td { border-bottom: none; }
+
+.exercise-card {
+  background: #fff; padding: 14px; border-radius: 8px; margin-bottom: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06); border-left: 4px solid #2a6b54;
+}
+.exercise-card h4 {
+  margin: 0 0 6px 0; color: #1a4d3a; font-size: 16px; display: flex;
+  justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;
+}
+.exercise-card .ex-num {
+  background: #1a4d3a; color: #fff; padding: 2px 8px; border-radius: 4px;
+  font-size: 12px; font-weight: 700; margin-right: 8px;
+}
+.exercise-card .ex-meta {
+  display: flex; flex-wrap: wrap; gap: 12px; font-size: 12px; color: #6b6b6b;
+  margin: 6px 0 8px 0;
+}
+.exercise-card .ex-meta span {
+  background: #f0ece4; padding: 3px 8px; border-radius: 4px; color: #1a4d3a; font-weight: 500;
+}
+.exercise-card .ex-cue { font-size: 13px; color: #555; margin-top: 6px; }
+.exercise-card .ex-cue strong { color: #2a6b54; }
+.exercise-card a {
+  display: inline-block; color: #2a6b54; font-weight: 600; font-size: 13px;
+  text-decoration: none; margin-top: 6px; padding: 4px 8px; background: #e8f4ee;
+  border-radius: 4px;
+}
+.exercise-card a:active { background: #d0e8db; }
+
+.tracker-grid {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 10px;
+}
+.tracker-grid input {
+  width: 100%; padding: 6px 4px; border: 1px solid #d4ccbe; border-radius: 4px;
+  font-size: 13px; font-family: inherit; background: #fafaf6; text-align: center;
+}
+.tracker-grid input:focus { border-color: #1a4d3a; outline: none; background: #fff; }
+.tracker-grid label {
+  display: block; font-size: 10px; color: #6b6b6b; text-transform: uppercase;
+  font-weight: 600; margin-bottom: 2px; text-align: center;
+}
+.tracker-grid .deload-week input { background: #fff3cd; }
+.collapsible {
+  background: #fff; border-radius: 8px; margin-bottom: 8px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06); overflow: hidden;
+}
+.collapsible-header {
+  padding: 14px; font-weight: 600; cursor: pointer; background: #2a6b54; color: #fff;
+  display: flex; justify-content: space-between; align-items: center;
+}
+.collapsible-header::after { content: "+"; font-size: 20px; font-weight: 300; }
+.collapsible.open .collapsible-header::after { content: "−"; }
+.collapsible-body { padding: 0 14px; max-height: 0; overflow: hidden; transition: max-height 0.3s ease, padding 0.3s ease; }
+.collapsible.open .collapsible-body { padding: 14px; max-height: none; }
+
+.day-tag {
+  display: inline-block; padding: 4px 10px; border-radius: 12px;
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+.day-tag.upper { background: #2a6b54; color: #fff; }
+.day-tag.lower { background: #c0392b; color: #fff; }
+.day-tag.pull { background: #2a6b9b; color: #fff; }
+.day-tag.posterior { background: #8b5cf6; color: #fff; }
+
+.notes-input {
+  width: 100%; padding: 8px; border: 1px solid #d4ccbe; border-radius: 4px;
+  font-family: inherit; font-size: 13px; background: #fafaf6; margin-top: 8px;
+  resize: vertical; min-height: 50px;
+}
+
+@media (min-width: 700px) {
+  body { font-size: 17px; }
+  header h1 { font-size: 28px; }
+  h2 { font-size: 22px; }
+  nav a { font-size: 15px; padding: 16px 18px; }
+  .tracker-grid { grid-template-columns: repeat(6, 1fr); }
+}
+@media (min-width: 1000px) {
+  .tracker-grid { grid-template-columns: repeat(12, 1fr); }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#overview">Overview</a>
+    <a href="#science">Science</a>
+    <a href="#periodization">Periodisation</a>
+    <a href="#dayA">Day A</a>
+    <a href="#dayB">Day B</a>
+    <a href="#dayC">Day C</a>
+    <a href="#dayD">Day D</a>
+    <a href="#warmups">Warm-ups</a>
+    <a href="#functional">Functional</a>
+    <a href="#cardio">Cardio</a>
+    <a href="#deload">Deload</a>
+    <a href="#intensity">Intensity</a>
+    <a href="#weakpoint">Weak points</a>
+    <a href="#tracker">Tracker</a>
+    <a href="#nutrition">Nutrition</a>
+  </div>
+</nav>
+
+<header>
+  <h1>12-Week Training Program</h1>
+  <div class="sub">Lean recomp · 90kg → +5kg lean · 48yo intermediate · L5/S1-safe · Revo Charlestown</div>
+</header>
+
+<main>
+
+<section id="overview">
+<h2>1. Overview &amp; profile-driven choices</h2>
+
+<div class="callout callout-red">
+<strong>UPDATED for torn + bulging + prolapsed L5/S1 — get physio clearance before week 1:</strong>
+<ul style="margin-top:6px;">
+<li><strong>NO conventional deadlifts, back squats with bar on spine, bent-over barbell rows, RDLs, good mornings, hyperextensions with weight, OR flat bench press.</strong></li>
+<li><strong>NO hip hinges under load — period.</strong> Cable pull-through and Romanian-style work are out until cleared by a physio. Hip thrust is allowed (no spinal load) and lying leg curls cover the hamstring work.</li>
+<li><strong>NO spinal flexion under load.</strong> No crunches, no sit-ups, no Russian twists, no weighted hanging leg/knee raises. Mid-core work is anti-extension, anti-rotation, anti-lateral-flexion only.</li>
+<li><strong>Squats are MACHINE-supported only:</strong> leg press as primary (full spine support), hack squat as secondary (some axial load — start light, brace hard).</li>
+<li><strong>Daily dead hang from pull-up bar (30-60 sec)</strong> at the end of every session — passive spinal decompression, McGill-recommended for bulging discs.</li>
+<li><strong>2x/week frequency per muscle group</strong> via Upper/Lower split.</li>
+<li><strong>Sessions capped at 50-65 min</strong> to fit your 45-75 min window.</li>
+</ul>
+<p style="margin-top:10px;"><strong>RED FLAGS — go to ED immediately:</strong> saddle numbness (numbness around groin/inner thighs), leg weakness, foot drop, loss of bladder/bowel control. These are signs of cauda equina syndrome and are surgical emergencies.</p>
+</div>
+
+<div class="callout">
+<strong>Before you start week 1:</strong>
+<ol style="margin-top:6px;">
+<li>Get current MRI (within last 12 months) so you and your physio know what you're working with.</li>
+<li>1-2 sessions with a physiotherapist who specialises in disc rehab — get them to watch you do hack squat, hip thrust, chest-supported row.</li>
+<li>If they say no, listen to them. This program adapts.</li>
+</ol>
+</div>
+
+<h3>Your profile drives the choices</h3>
+<table>
+<tr><th>Variable</th><th>Choice</th><th>Why</th></tr>
+<tr><td>Frequency</td><td>4 days/week (3 days as fallback — see below)</td><td>You said 3-4. Four lets us hit each muscle 2x/week with full recovery. Three days = drop Day D and rotate.</td></tr>
+<tr><td>Split</td><td>Upper Push / Lower Quad / Upper Pull / Lower Posterior</td><td>2x/week frequency per muscle. Avoids back-to-back sessions hitting same group. Lower-body split avoids loading L5/S1 twice in a row.</td></tr>
+<tr><td>Volume</td><td>14-20 sets per muscle/week</td><td>Sweet spot for intermediate hypertrophy. Below 10 = undertraining. Above 22 = recovery-limited at 48 even with peptides.</td></tr>
+<tr><td>Intensity</td><td>RPE 7-9 across phases</td><td>Builds in autoregulation. You'll have low-recovery days (Reta-suppressed Mon/Tue) and high-recovery days. RPE adjusts.</td></tr>
+<tr><td>Time per session</td><td>50-65 min</td><td>Warm-up 8min + 5-6 working exercises ~40min + 6min core/finisher = fits your window.</td></tr>
+<tr><td>Cardio</td><td>2x/week LISS, 1x optional finisher</td><td>Recomp on Reta needs minimal cardio interference. Just enough for cardio health and recovery, not enough to compete for nutrients.</td></tr>
+</table>
+
+<h3>"All heads of every muscle" — how the split actually does it</h3>
+<table>
+<tr><th>Muscle</th><th>Heads / regions targeted</th><th>Exercises that hit each</th></tr>
+<tr><td>Triceps</td><td>Long head, lateral head, medial head</td><td>Long: overhead rope ext, incline DB skullcrusher. Lateral: rope pushdown. Medial: close-grip pushdown supinated, dips.</td></tr>
+<tr><td>Biceps</td><td>Short head, long head, brachialis, brachioradialis</td><td>Long: incline DB curl. Short: preacher / spider curl. Brachialis: hammer curl. Brachioradialis: reverse curl.</td></tr>
+<tr><td>Chest</td><td>Upper, mid, lower, inner</td><td>Upper: incline 30-45°. Mid: flat press / chest-supported. Lower: dips, decline press. Inner: cable crossover.</td></tr>
+<tr><td>Back</td><td>Lats (vertical + horizontal), upper traps, mid traps, lower traps, rhomboids, rear delt, teres major</td><td>Lats vertical: pulldowns. Lats horizontal: rows. Mid/lower traps: face pulls, single-arm cable rows. Rear delt: reverse pec deck.</td></tr>
+<tr><td>Shoulders</td><td>Anterior, lateral, posterior (rear delt), supraspinatus, infraspinatus, teres minor, upper traps</td><td>Anterior: Seated machine shoulder press (Day A) + indirect from incline pressing. Lateral: seated DB lateral raise (Day A). Posterior/rear delt: reverse pec deck + face pull (Day C). Traps: DB shrugs (Day C — now actually in the program). Rotator cuff: face pulls + reverse fly external rotation.</td></tr>
+<tr><td>Quads</td><td>Rectus femoris, VMO, vastus lateralis, vastus medialis</td><td>RF: leg ext + sissy squat. VMO: full-range hack squat. Lateral/medial: leg press foot positions.</td></tr>
+<tr><td>Hamstrings</td><td>Knee flexion + hip extension</td><td>Knee flexion: lying + seated leg curl (different angles). Hip ext: cable pull-through, hip thrust.</td></tr>
+<tr><td>Glutes</td><td>Max, medius, minimus</td><td>Max: hip thrust, single-leg variations. Med/min: cable abduction, single-leg work, side planks.</td></tr>
+<tr><td>Calves</td><td>Gastrocnemius, soleus</td><td>Gastroc: standing calf raise. Soleus: seated calf raise.</td></tr>
+<tr><td>Forearms</td><td>Flexors, extensors, brachioradialis, grip</td><td>Flexors: wrist curl. Extensors: reverse wrist curl. Brachioradialis: hammer / reverse curl. Grip: farmer's carry, dead hang, plate pinch.</td></tr>
+<tr><td>Mid-core (L5/S1 safe)</td><td>Anti-extension, anti-rotation, anti-lateral flexion, deep stabilisers</td><td>Dead bug, bird dog, Pallof press, side plank, suitcase carry, hanging knee raise (if pain-free).</td></tr>
+</table>
+</section>
+
+<section id="science">
+<h2>2. Science Foundation (the evidence base)</h2>
+
+<div class="callout callout-blue">
+<strong>What this program is built on:</strong> Schoenfeld 2017 meta-analysis on volume-hypertrophy relationship. Helms RIR system (2018). Israetel volume landmarks (MV/MEV/MAV/MRV). Krieger 2010 meta on frequency. Mike Israetel and RP's set-volume research. NOT bro-science Instagram templates.
+</div>
+
+<h3>Volume targets per muscle group per week (research-backed)</h3>
+<table>
+<tr><th>Muscle group</th><th>MEV (min effective)</th><th>MAV (max adaptive)</th><th>This program (sets/wk)</th><th>Within optimal range?</th></tr>
+<tr><td>Chest</td><td>10</td><td>20</td><td>14 (Day A: 4+3+3 + Day C indirect 4)</td><td>Yes</td></tr>
+<tr><td>Back (lats + mid)</td><td>10</td><td>22</td><td>18 (Day C: 4+4+3+4 + indirect 3)</td><td>Yes</td></tr>
+<tr><td>Shoulders (lateral delt)</td><td>8</td><td>22</td><td>16 (4 lateral raise Day A + 3 overhead press Day A + face pulls 4 + indirect 5)</td><td>Yes</td></tr>
+<tr><td>Rear delt</td><td>8</td><td>20</td><td>14 (3 reverse pec deck Day C + 4 face pull Day C + 7 indirect from rows)</td><td>Yes</td></tr>
+<tr><td>Traps (upper)</td><td>6</td><td>16</td><td>9 (3 shrugs Day C + 4 face pulls partial + 2 indirect rows)</td><td>Yes</td></tr>
+<tr><td>Biceps</td><td>8</td><td>20</td><td>14 (3 incline curl + 2 cable elevated + 3 hammer curl Day C + 3 indirect from rows + 3 preacher removed — now 8 direct)</td><td>Yes</td></tr>
+<tr><td>Triceps</td><td>8</td><td>18</td><td>11 (3+3 Day A + 5 indirect from press)</td><td>Yes</td></tr>
+<tr><td>Quads</td><td>8</td><td>20</td><td>14 (Day B: 4+3+3+3+1 single-leg)</td><td>Yes</td></tr>
+<tr><td>Hamstrings</td><td>6</td><td>20</td><td>10 (Day D: 4+3 + indirect 3)</td><td>Yes</td></tr>
+<tr><td>Glutes</td><td>6</td><td>20</td><td>14 (Day D: 4+3+3+3 + Day B 1)</td><td>Yes</td></tr>
+<tr><td>Calves</td><td>8</td><td>16</td><td>10 (Day B: 4+3 + Day D: 3)</td><td>Yes</td></tr>
+<tr><td>Forearms</td><td>4</td><td>12</td><td>6 (3+3 Day C + indirect from grip)</td><td>Yes</td></tr>
+</table>
+
+<div class="callout">
+<strong>What MEV/MAV mean:</strong> MEV = Minimum Effective Volume (sets needed to grow at all). MAV = Maximum Adaptive Volume (sets where growth peaks). Above MAV you cross into MRV (Maximum Recoverable Volume) and start overtraining. Your peptide stack lifts your MRV slightly, but at 48 with eGFR concerns we stay closer to MEV-MAV midpoint, NOT pushing MRV.
+</div>
+
+<h3>Frequency: hitting each muscle 2x/week</h3>
+<p>Schoenfeld et al. (2016) meta-analysis on frequency: training a muscle 2x/week produces ~3.1% more growth than 1x/week at matched volume. The split is built around this — every muscle gets at least one direct + one indirect session per week.</p>
+
+<h3>Rep range periodisation across the 12 weeks</h3>
+<table>
+<tr><th>Phase</th><th>Compound rep range</th><th>Isolation rep range</th><th>Why</th></tr>
+<tr><td>Foundation (wks 1-4)</td><td>10-12 reps</td><td>12-15 reps</td><td>Hypertrophy sweet spot. Build base. Learn form. Connective tissue adapts before maximal load.</td></tr>
+<tr><td>Building (wks 6-9)</td><td>6-10 reps</td><td>10-12 reps</td><td>Moderate-heavy load. Most strength + size simultaneously. Mechanical tension dominant.</td></tr>
+<tr><td>Peak (wks 11-12)</td><td>5-8 reps (compound) + 15-20 (finishers)</td><td>8-12 + drop sets</td><td>Mix heavy mechanical tension with metabolic stress finishers. Both pathways for hypertrophy.</td></tr>
+</table>
+
+<h3>RIR (Reps in Reserve) system — autoregulation explained</h3>
+<table>
+<tr><th>RIR</th><th>What it feels like</th><th>When to use</th></tr>
+<tr><td>3+ RIR</td><td>"I could've done 3+ more reps easy"</td><td>Warm-up sets, deload weeks, technique-focus sets</td></tr>
+<tr><td>2 RIR</td><td>"I could've done 2 more"</td><td>Foundation phase compound + most isolation work</td></tr>
+<tr><td>1 RIR</td><td>"Maybe one more, with grinding"</td><td>Building phase last set, Peak phase working sets</td></tr>
+<tr><td>0 RIR</td><td>True failure</td><td>Last set of isolation only in Peak phase. NEVER on compounds (form breakdown = injury).</td></tr>
+</table>
+
+<div class="callout callout-red">
+<strong>Why RIR beats fixed % of 1RM:</strong> Your strength fluctuates day-to-day (Reta-suppressed days, sleep, stress, injection days). Fixed % programs ignore this. RIR autoregulates — you adjust load to hit the target effort level. On a great day you'll lift more; on a bad day, less. Either way, the stimulus is right.
+</div>
+</section>
+
+<section id="periodization">
+<h2>3. 12-Week Periodisation</h2>
+
+<table>
+<tr><th>Phase</th><th>Weeks</th><th>Focus</th><th>Sets / Reps / RPE</th></tr>
+<tr><td><strong>Foundation</strong></td><td>1-4</td><td>Volume accumulation, form, mind-muscle connection</td><td>3-4 sets · 10-12 reps compound, 12-15 isolation · RPE 7 (3 RIR)</td></tr>
+<tr style="background:#fff3cd;"><td><strong>Deload</strong></td><td>5</td><td>Recovery, supercompensation</td><td>2 sets · same reps · RPE 5 (5 RIR) · 60% load</td></tr>
+<tr><td><strong>Building</strong></td><td>6-9</td><td>Strength-hypertrophy, heavier loads</td><td>4 sets compound, 3 isolation · 8-10 reps compound, 10-12 isolation · RPE 8 (2 RIR)</td></tr>
+<tr style="background:#fff3cd;"><td><strong>Deload</strong></td><td>10</td><td>Recovery before peak</td><td>2 sets · same reps · RPE 5 · 60% load</td></tr>
+<tr><td><strong>Peak / Intensification</strong></td><td>11-12</td><td>Maximum stimulus, intensification techniques</td><td>4-5 sets compound, 3 isolation · 6-8 reps compound, 8-12 isolation · RPE 8-9 (1-2 RIR) + drop sets on last set isolation</td></tr>
+</table>
+
+<div class="callout callout-blue">
+<strong>RPE explained:</strong> RPE = Rate of Perceived Exertion. RIR = Reps in Reserve.
+<ul style="margin-top:6px;">
+<li>RPE 7 = 3 reps left in the tank when you stop the set</li>
+<li>RPE 8 = 2 reps left</li>
+<li>RPE 9 = 1 rep left</li>
+<li>RPE 10 = absolute failure</li>
+</ul>
+For your goal (hypertrophy + recovery on Reta), <strong>never train to failure on compounds</strong>. Save it for last set of isolation only in Peak phase.
+</div>
+
+<h3>Weekly progression rule (during each phase)</h3>
+<ol>
+<li><strong>Week 1 of phase:</strong> Establish baseline weight at the prescribed RPE.</li>
+<li><strong>Week 2:</strong> Add 1-2 reps at same weight, OR add 2.5kg if hit top of rep range.</li>
+<li><strong>Week 3:</strong> Add 1-2 more reps at same weight, OR add another 2.5kg.</li>
+<li><strong>Week 4:</strong> Push for one more rep on each set, OR add load.</li>
+</ol>
+<p style="font-size:13px;color:#6b6b6b;"><em>Double progression: hit top of rep range with good form for 2 sessions in a row → add weight, drop back to bottom of rep range, build back up.</em></p>
+</section>
+
+<section id="dayA">
+<h2>4. Day A — Upper Push</h2>
+<span class="day-tag upper">Chest · Shoulders (incl. overhead press) · Triceps · Mid-core</span>
+<p style="font-size:14px;color:#6b6b6b;">Estimated time: 55-65 min · Rest periods listed per exercise · Tempo notation: eccentric-pause-concentric-pause (e.g. 3-1-1-0 = 3sec down, 1sec pause, 1sec up, no pause top)</p>
+
+<div class="exercise-card">
+<h4><span><span class="ex-num">A1</span>Incline Dumbbell Press</span></h4>
+<div class="ex-meta">
+<span>4 sets × 8-10 reps</span><span>Tempo 3-1-1-0</span><span>Rest 90s</span><span>Bench at 30°</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Squeeze the dumbbells at the top, don't smash them together. Elbows track at 45° from torso, not flared 90°. Pause at the bottom — chest stretch is where growth happens.</div>
+<div class="ex-cue"><strong>Why:</strong> Upper chest (clavicular pec) is the area most lifters under-develop and what makes a chest look "full" on a 48-year-old. DBs over barbell for shoulder safety + range of motion.</div>
+<a href="https://www.youtube.com/results?search_query=incline+dumbbell+press+jeff+nippard" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card">
+<h4><span><span class="ex-num">A2</span>Seated Machine Chest Press (vertical) OR Hammer Strength Incline Press</span></h4>
+<div class="ex-meta">
+<span>3 sets × 10-12 reps</span><span>Tempo 2-1-1-1</span><span>Rest 90s</span><span>Mid-chest, no flat bench</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Seated upright machine — back fully supported by pad. Drive handles forward and slightly up. Squeeze pecs at the top for 1 sec. Don't lock elbows.</div>
+<div class="ex-cue"><strong>Why:</strong> Replaces flat bench entirely. Vertical machine = your spine is supported the whole time, zero risk to your disc. Same chest stimulus, none of the lying-flat issue. If Revo only has flat Hammer Strength press, use seated cable chest press instead.</div>
+<div class="ex-cue"><strong>Substitution if no machine available:</strong> Standing cable chest press (chest-height cables, slight forward lean from hips with neutral spine).</div>
+<a href="https://www.youtube.com/results?search_query=seated+machine+chest+press+form" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card">
+<h4><span><span class="ex-num">A3</span>Cable Crossover (high-to-low)</span></h4>
+<div class="ex-meta">
+<span>3 sets × 12-15 reps</span><span>Tempo 2-1-2-1</span><span>Rest 60s</span><span>Lower chest + inner</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Slight forward lean, soft elbows fixed throughout. Bring hands down and across the body, finishing at hip level. Squeeze for full second at bottom.</div>
+<div class="ex-cue"><strong>Why:</strong> Stretch + squeeze in one move. Hits lower chest fibres + inner pec (sternal head) you can't get from pressing alone.</div>
+<a href="https://www.youtube.com/results?search_query=high+to+low+cable+crossover+form" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card">
+<h4><span><span class="ex-num">A4</span>Seated Dumbbell Lateral Raise</span></h4>
+<div class="ex-meta">
+<span>4 sets × 12-15 reps</span><span>Tempo 2-0-1-1</span><span>Rest 60s</span><span>Lateral delt</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Lead with elbows, not hands. Stop at shoulder height — going higher recruits traps. Slight forward lean (15°). Pinky slightly higher than thumb at top (like pouring a jug).</div>
+<div class="ex-cue"><strong>Why:</strong> Lateral delt is what gives shoulders their width. Most lifters do this wrong and end up training traps. Seated removes leg drive cheating.</div>
+<a href="https://www.youtube.com/results?search_query=seated+dumbbell+lateral+raise+form+lead+with+elbow" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card">
+<h4><span><span class="ex-num">A5</span>Seated Machine Shoulder Press (or Seated DB Overhead Press)</span></h4>
+<div class="ex-meta">
+<span>3 sets × 8-12 reps</span><span>Tempo 3-1-1-0</span><span>Rest 90s</span><span>Anterior delt + lateral delt — direct overhead stimulus</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Back fully supported by the pad — do NOT arch the lumbar to press. Drive the handles straight up, not forward. Stop just short of lockout at the top. Slow 3-second descent — resist the weight, don't drop it. Keep elbows tracking slightly in front of the body, not flared directly to the sides.</div>
+<div class="ex-cue"><strong>Why (added — was missing):</strong> Incline and flat chest pressing does not adequately load the anterior deltoid or drive overall shoulder mass the way overhead pressing does. The angle is too horizontal. If you want wider, rounder shoulders, you need overhead pressing. Machine or seated DB version keeps your spine fully supported — zero axial load — completely safe for L5/S1. Rear delt work has been moved to Day C where it sits alongside Face Pulls for better volume grouping.</div>
+<div class="ex-cue"><strong>Substitution:</strong> If no machine available — Seated DB Overhead Press with a vertical back-supported bench (NOT standing). Start 16-20kg DBs, own the form before adding load.</div>
+<a href="https://www.youtube.com/results?search_query=seated+machine+shoulder+press+form" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card">
+<h4><span><span class="ex-num">A6</span>Overhead Cable Tricep Extension (rope)</span></h4>
+<div class="ex-meta">
+<span>3 sets × 10-12 reps</span><span>Tempo 3-1-1-1</span><span>Rest 75s</span><span>Long head</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Elbows stay locked in position pointing forward. At top, separate the rope hands — this maximises long head contraction. Big stretch at the bottom — that's where the growth is.</div>
+<div class="ex-cue"><strong>Why:</strong> Long head is 60% of tricep mass and only worked when the shoulder is flexed (arm overhead). Skip this and your triceps look flat from the side.</div>
+<a href="https://www.youtube.com/results?search_query=overhead+rope+tricep+extension+long+head" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card">
+<h4><span><span class="ex-num">A7</span>Tricep Pushdown (V-bar, supinated grip on last set)</span></h4>
+<div class="ex-meta">
+<span>3 sets × 12-15 reps</span><span>Tempo 2-0-1-1</span><span>Rest 60s</span><span>Medial + lateral head</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Elbows pinned to ribs the entire time. Drive hands down and BACK at the bottom (slight extension behind hip line). Last set: flip to underhand grip for medial head emphasis.</div>
+<a href="https://www.youtube.com/results?search_query=tricep+pushdown+form+v+bar" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card" style="border-left-color:#c0392b;">
+<h4><span><span class="ex-num">A8</span>Pallof Press (mid-core)</span></h4>
+<div class="ex-meta">
+<span>3 sets × 10 reps each side</span><span>Tempo 1-2-1-0</span><span>Rest 30s</span><span>Anti-rotation</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Stand side-on to cable stack, chest height. Press cable straight out from chest, hold 2sec, return. Body should NOT rotate — that's the whole point. Brace abs hard.</div>
+<div class="ex-cue"><strong>Why:</strong> Anti-rotation is what protects the L5/S1 disc in real life (lifting, twisting). Most important core exercise for your back. Skip crunches forever.</div>
+<a href="https://www.youtube.com/results?search_query=pallof+press+form+cable" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card" style="border-left-color:#c0392b;">
+<h4><span><span class="ex-num">A9</span>Dead Bug (mid-core)</span></h4>
+<div class="ex-meta">
+<span>3 sets × 8 reps each side</span><span>Tempo slow + controlled</span><span>Rest 30s</span><span>Anti-extension</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Lower back pressed firmly into the floor the WHOLE time. If your back arches, you've gone too far. Exhale on the extension. Move slowly.</div>
+<div class="ex-cue"><strong>Why:</strong> Trains the deep transverse abdominis to brace the spine — the muscle that protects your disc when you stand up from a chair or lift a box.</div>
+<a href="https://www.youtube.com/results?search_query=dead+bug+exercise+core+form" target="_blank">Watch form (YouTube)</a>
+</div>
+</section>
+
+<section id="dayB">
+<h2>5. Day B — Lower (Quad Focus)</h2>
+<span class="day-tag lower">Quads · Glutes · Calves · L5/S1-protected</span>
+<p style="font-size:14px;color:#6b6b6b;">Estimated time: 55-70 min · Leg press is the primary lift (fully supported spine). Hack squat is secondary with caveats.</p>
+
+<div class="exercise-card">
+<h4><span><span class="ex-num">B1</span>Leg Press (low foot position for quads) — PRIMARY</span></h4>
+<div class="ex-meta">
+<span>4 sets × 10-12 reps</span><span>Tempo 3-1-1-0</span><span>Rest 2 min</span><span>Quad mass, full spine support</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Feet low on platform = quad emphasis. Feet shoulder-width. <strong>STOP descent before your lower back rounds off the pad</strong> — this is the critical safety point. Your back must stay PRESSED into the pad the entire rep. Don't lock knees hard at the top.</div>
+<div class="ex-cue"><strong>Why this is now PRIMARY (was B2):</strong> With a torn disc, the leg press is the safest heavy quad builder. Spine fully supported in reclined position — zero compression. This is where you load heavy.</div>
+<a href="https://www.youtube.com/results?search_query=leg+press+foot+placement+quads" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card">
+<h4><span><span class="ex-num">B2</span>Hack Squat (machine) — SECONDARY, lighter</span></h4>
+<div class="ex-meta">
+<span>3 sets × 10-15 reps</span><span>Tempo 3-1-1-0</span><span>Rest 90s</span><span>Quad emphasis, light load</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Feet shoulder-width, slightly forward of hips. Brace abs HARD before each rep. Pause 1sec at the bottom. <strong>STOP if you feel anything in your low back.</strong></div>
+<div class="ex-cue"><strong>Why secondary now (was B1):</strong> Hack squat still has some axial load through the spine even with the pad — for a torn annulus this is more risk than leg press. Use lighter loads (RPE 7), higher reps (10-15) for a quad pump rather than heavy strain. <strong>Skip entirely if your physio says no.</strong></div>
+<div class="ex-cue"><strong>Substitution if uncomfortable:</strong> Goblet squat to box (light KB held at chest, sit back to a box at parallel — depth controlled, neutral spine throughout).</div>
+<a href="https://www.youtube.com/results?search_query=hack+squat+machine+form" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card">
+<h4><span><span class="ex-num">B3</span>Bulgarian Split Squat (DB)</span></h4>
+<div class="ex-meta">
+<span>3 sets × 10-12 reps each leg</span><span>Tempo 2-0-1-0</span><span>Rest 75s between sides</span><span>Single-leg quad + glute</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Front foot far enough forward that knee tracks over ankle (NOT past toes). Back foot on bench laces-down. Drive through front heel. Slight forward torso lean = more quad. Vertical torso = more glute.</div>
+<div class="ex-cue"><strong>Why:</strong> Single-leg work is the most underrated mass builder for legs and glutes. Also bullet-proofs hips and knees for everyday life. Lower load needed = less back stress.</div>
+<a href="https://www.youtube.com/results?search_query=bulgarian+split+squat+form+jeff+nippard" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card">
+<h4><span><span class="ex-num">B4</span>Reverse Lunge (DB or holding rack for support)</span></h4>
+<div class="ex-meta">
+<span>3 sets × 10 reps each leg</span><span>Tempo controlled</span><span>Rest 75s</span><span>Quad + glute, less impact than walking lunge</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Step BACKWARD into a lunge (less impact on the spine than the stepping-forward of walking lunges). Drop straight down, vertical torso, drive back up through front heel. Hold light DBs OR if balance is a challenge, hold the squat rack with one hand for support and use a single DB in the other.</div>
+<div class="ex-cue"><strong>Why changed:</strong> Walking lunges have a subtle spine-loading impact each step. Reverse lunges are gentler on the spine and easier to brace. Same muscle stimulus.</div>
+<a href="https://www.youtube.com/results?search_query=reverse+lunge+dumbbell+form" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card">
+<h4><span><span class="ex-num">B5</span>Leg Extension (single-leg on last set)</span></h4>
+<div class="ex-meta">
+<span>3 sets × 12-15 reps</span><span>Tempo 2-1-2-1</span><span>Rest 60s</span><span>Quad isolation, all heads</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Pause at top for 1 second — squeeze quads hard. Slight toe-out for VMO emphasis (teardrop above knee). Last set single-leg for asymmetry correction.</div>
+<a href="https://www.youtube.com/results?search_query=leg+extension+form+quad+isolation" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card">
+<h4><span><span class="ex-num">B6</span>Standing Calf Raise (Smith machine or machine)</span></h4>
+<div class="ex-meta">
+<span>4 sets × 10-15 reps</span><span>Tempo 2-2-1-1</span><span>Rest 45s</span><span>Gastrocnemius</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> FULL range — let the heels drop deep below platform, then drive up to absolute peak. Pause 1 second at top. Pause 2 seconds at bottom stretch. Calves are stubborn — they need the stretch.</div>
+<a href="https://www.youtube.com/results?search_query=standing+calf+raise+form+full+range" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card">
+<h4><span><span class="ex-num">B7</span>Seated Calf Raise</span></h4>
+<div class="ex-meta">
+<span>3 sets × 12-20 reps</span><span>Tempo 2-2-1-1</span><span>Rest 45s</span><span>Soleus</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Same full range. Soleus needs higher reps (slow-twitch fibre). Burn out the last set — you should want to stop 2 reps before you do.</div>
+<a href="https://www.youtube.com/results?search_query=seated+calf+raise+soleus" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card" style="border-left-color:#c0392b;">
+<h4><span><span class="ex-num">B8</span>Suitcase Carry (LIGHT to start)</span></h4>
+<div class="ex-meta">
+<span>3 sets × 30m each side</span><span>Tempo brisk walk</span><span>Rest 60s</span><span>Anti-lateral flexion</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> <strong>Start with a 12-16kg DB or KB only — half what you think you can carry.</strong> Walk tall. Do NOT lean to the loaded side — your obliques fight that lean. Stop the set if your trunk starts to bend. Build slowly over weeks.</div>
+<div class="ex-cue"><strong>Why:</strong> Trains the lateral core (quadratus lumborum, obliques) which protect the disc during everyday asymmetric loads (carrying tools, kids, briefcase). With a torn disc, this is rehabilitative — but only with light weight initially. <strong>Skip if your physio says no carries during acute symptom flares.</strong></div>
+<a href="https://www.youtube.com/results?search_query=suitcase+carry+exercise+form" target="_blank">Watch form (YouTube)</a>
+</div>
+</section>
+
+<section id="dayC">
+<h2>6. Day C — Upper Pull</h2>
+<span class="day-tag pull">Back · Rear Delt · Traps · Biceps · Forearms · Mid-core</span>
+<p style="font-size:14px;color:#6b6b6b;">Estimated time: 60-70 min · Chest-supported rows replace bent-over rows. Lats hit from vertical AND horizontal vectors. Rear delt + trap work consolidated here from Day A for better volume grouping.</p>
+
+<div class="exercise-card">
+<h4><span><span class="ex-num">C1</span>Lat Pulldown (wide, slight lean back)</span></h4>
+<div class="ex-meta">
+<span>4 sets × 8-12 reps</span><span>Tempo 3-1-1-1</span><span>Rest 90s</span><span>Lats (width)</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Grip just outside shoulders. Drive elbows down to ribs (not pull bar to chest). Squeeze lats hard at the bottom for 1 second. Slight backward lean (15°). Control the negative.</div>
+<div class="ex-cue"><strong>Why:</strong> Vertical pulling for lat width. Slight lean = bigger ROM and more lat involvement than fully upright.</div>
+<a href="https://www.youtube.com/results?search_query=lat+pulldown+form+jeff+nippard" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card">
+<h4><span><span class="ex-num">C2</span>Chest-Supported DB Row (or Hammer Strength row)</span></h4>
+<div class="ex-meta">
+<span>4 sets × 8-12 reps</span><span>Tempo 2-1-1-1</span><span>Rest 90s</span><span>Mid-back, NO spinal load</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Bench at 30°, chest pinned to pad the entire set. Drive elbows back behind ribcage. Squeeze shoulder blades together at the top for 1 second. DON'T jerk or use momentum.</div>
+<div class="ex-cue"><strong>Why:</strong> This replaces bent-over barbell rows for you. Chest-supported = zero spinal load = safe for L5/S1. Same back stimulus, none of the risk. Hits rhomboids + mid traps + lats.</div>
+<a href="https://www.youtube.com/results?search_query=chest+supported+dumbbell+row+form" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card">
+<h4><span><span class="ex-num">C3</span>Single-Arm Cable Row (low pulley)</span></h4>
+<div class="ex-meta">
+<span>3 sets × 10-12 reps each side</span><span>Tempo 2-1-1-1</span><span>Rest 60s/side</span><span>Lat thickness + lower trap</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Half-kneeling or standing split stance. Pull elbow back along ribs. Get a deep stretch at the front of the rep — let the shoulder blade come forward. Then squeeze hard at the back.</div>
+<a href="https://www.youtube.com/results?search_query=single+arm+cable+row+form" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card">
+<h4><span><span class="ex-num">C4</span>Face Pull (rope, high cable)</span></h4>
+<div class="ex-meta">
+<span>4 sets × 12-15 reps</span><span>Tempo 2-2-1-1</span><span>Rest 60s</span><span>Rear delt + rotator cuff + mid traps</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Rope at forehead height. Pull rope ENDS apart and back — your hands should end up beside your ears, not in front. External rotation at the end. Pause 2 seconds.</div>
+<div class="ex-cue"><strong>Why:</strong> Best shoulder health exercise on the planet. With all the pressing on Day A, this keeps your rotator cuff balanced. Also hits rear delts and mid traps hard.</div>
+<a href="https://www.youtube.com/results?search_query=face+pull+rope+form+rear+delt" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card">
+<h4><span><span class="ex-num">C5</span>Reverse Pec Deck (or Cable Reverse Fly)</span></h4>
+<div class="ex-meta">
+<span>3 sets × 12-15 reps</span><span>Tempo 2-1-1-1</span><span>Rest 60s</span><span>Rear delt — moved from Day A, consolidated here</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Imagine pulling a sword out of a sheath behind you. Squeeze shoulder blades apart, NOT together (this is rear delt, not rhomboids). Thumbs back at end position. Do NOT let your traps take over — keep the movement in the posterior delt.</div>
+<div class="ex-cue"><strong>Why moved to Day C:</strong> Rear delt work belongs on pull day alongside face pulls — both are horizontal pulling movements for the same muscle group. Consolidating them here lets Day A run a full overhead shoulder press instead, which was the gap in the program.</div>
+<a href="https://www.youtube.com/results?search_query=reverse+pec+deck+rear+delt+form" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card">
+<h4><span><span class="ex-num">C6</span>DB or Machine Shrugs</span></h4>
+<div class="ex-meta">
+<span>3 sets × 10-15 reps</span><span>Tempo 1-2-1-0</span><span>Rest 60s</span><span>Upper traps — was listed in overview, was missing from all days</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Hold DBs at sides (or use machine). Drive shoulders STRAIGHT UP — not forward, not rolling. Hold the top for 2 full seconds, squeezing the upper traps hard. Lower slowly. No bouncing, no momentum. Heavy enough to feel it, light enough to control.</div>
+<div class="ex-cue"><strong>Why (added — was genuinely missing):</strong> The original overview table promised "Traps: shrugs" but shrugs appeared in zero of the four days. This is the fix. Upper trap development is critical for the thick, rounded look across the top of the back — the muscle that bridges your neck to your shoulders. Without it, the back looks flat from behind regardless of how good your lats are.</div>
+<a href="https://www.youtube.com/results?search_query=dumbbell+shrugs+upper+trap+form" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card">
+<h4><span><span class="ex-num">C7</span>Incline Dumbbell Curl</span></h4>
+<div class="ex-meta">
+<span>3 sets × 10-12 reps</span><span>Tempo 3-1-1-1</span><span>Rest 60s</span><span>Bicep long head — peak builder</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Bench at 60°. Let arms hang STRAIGHT down at the bottom — don't cheat the stretch. Curl up without swinging the elbows forward. Squeeze hard at the top.</div>
+<div class="ex-cue"><strong>Why:</strong> Long head of biceps is most active when the shoulder is in extension (arm behind body) — incline curl puts you there. Builds the bicep peak.</div>
+<a href="https://www.youtube.com/results?search_query=incline+dumbbell+curl+long+head" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card">
+<h4><span><span class="ex-num">C8</span>Cable Curl — Arm Elevated (Coracobrachialis focus)</span></h4>
+<div class="ex-meta">
+<span>2 sets × 12-15 reps each side</span><span>Tempo 2-1-2-1</span><span>Rest 45s</span><span>Coracobrachialis + bicep short head</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Set cable to approximately shoulder height (or slightly above). Stand side-on or face the stack, raise your working arm forward and up so your elbow is at roughly shoulder height pointing toward the cable. Curl your hand toward your face/shoulder — the forearm moves while the upper arm stays elevated and fixed. Squeeze hard at peak contraction. Slow return. Do both sides.</div>
+<div class="ex-cue"><strong>Why (replaces Preacher Curl — added for coracobrachialis):</strong> The coracobrachialis runs from the coracoid process to the inner humerus — it assists shoulder flexion and arm adduction. It's most active when the arm is elevated forward during a curl, which standard curls, preacher curls and incline curls don't provide. This movement specifically targets it. The short head also gets worked here due to the forward arm position. 2 sets only — it's a small muscle, it doesn't need volume, it needs the right angle.</div>
+<a href="https://www.youtube.com/results?search_query=high+cable+curl+arm+elevated+coracobrachialis" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card">
+<h4><span><span class="ex-num">C9</span>Hammer Curl (DB or rope cable) — superset with Reverse Wrist Curl</span></h4>
+<div class="ex-meta">
+<span>3 sets × 12 reps</span><span>Tempo 2-0-1-1</span><span>Rest 30s</span><span>Brachialis + brachioradialis + forearm extensors</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Neutral grip (thumbs up). DBs slightly across body for extra brachialis. Don't swing. Go straight into the reverse wrist curl with no rest — different muscle group, zero recovery needed.</div>
+<div class="ex-cue"><strong>Why:</strong> Brachialis underneath the bicep makes the upper arm look thicker from the side — it's the muscle that pushes the bicep up. Brachioradialis builds the outer forearm. The muscle on the outside of your upper arm that you're looking to develop — this is it.</div>
+<a href="https://www.youtube.com/results?search_query=hammer+curl+brachialis+form" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card">
+<h4><span><span class="ex-num">C10</span>Wrist Curl + Reverse Wrist Curl (seated, DB or barbell)</span></h4>
+<div class="ex-meta">
+<span>3 rounds × 15-20 reps each</span><span>Tempo 2-1-1-1</span><span>Rest 45s</span><span>Forearm flexors + extensors</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Forearms flat on thighs or bench. Let weight roll to fingertips at bottom for max stretch. Curl up using only wrist. Then flip to overhand for reverse — these will burn.</div>
+<div class="ex-cue"><strong>Why:</strong> Forearm size and grip strength = practical strength + better lifts everywhere else.</div>
+<a href="https://www.youtube.com/results?search_query=wrist+curl+forearm+exercise" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card" style="border-left-color:#c0392b;">
+<h4><span><span class="ex-num">C11</span>Dead Hang (passive spinal decompression)</span></h4>
+<div class="ex-meta">
+<span>3 sets × 30-60 sec</span><span>Tempo passive hold</span><span>Rest 60s</span><span>Spinal traction + grip</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Hang from pull-up bar, feet off floor (or just barely brushing). RELAX through the shoulders — let gravity stretch the spine. Bend knees if needed. Breathe deeply. Do NOT pull up or curl your knees — pure passive hang.</div>
+<div class="ex-cue"><strong>Why:</strong> Pure dead hang gives grip work + spine traction (rehabilitative for bulging discs) without any spinal flexion. McGill-recommended. Do this every single session — it takes 2 minutes and protects your disc.</div>
+<a href="https://www.youtube.com/results?search_query=dead+hang+exercise+spinal+decompression" target="_blank">Watch form (YouTube)</a>
+</div>
+</section>
+
+<section id="dayD">
+<h2>7. Day D — Lower (Posterior Chain + Glutes)</h2>
+<span class="day-tag posterior">Glutes · Hams · Calves · Mid-core · NO conventional DL</span>
+<p style="font-size:14px;color:#6b6b6b;">Estimated time: 55-65 min · This is the most important day for L5/S1 protection long-term — strong glutes + hams = decompressed spine.</p>
+
+<div class="exercise-card">
+<h4><span><span class="ex-num">D1</span>Barbell Hip Thrust (or Smith machine)</span></h4>
+<div class="ex-meta">
+<span>4 sets × 8-12 reps</span><span>Tempo 2-1-2-1</span><span>Rest 90s</span><span>Glute max — KING exercise</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Shoulder blades on bench, knees at 90° at top. Bar across hips with pad. Drive through HEELS, squeeze glutes HARD at top, ribs down (don't hyperextend lumbar). Pause 1 sec at top.</div>
+<div class="ex-cue"><strong>Why:</strong> The single best glute builder ever invented. Spine doesn't load axially — completely safe for your disc. Strong glutes = less low-back pain forever.</div>
+<a href="https://www.youtube.com/results?search_query=barbell+hip+thrust+form+bret+contreras" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card">
+<h4><span><span class="ex-num">D2</span>Single-Leg Hip Thrust (bodyweight progression)</span></h4>
+<div class="ex-meta">
+<span>3 sets × 10-12 reps each leg</span><span>Tempo 2-1-2-1</span><span>Rest 60s/side</span><span>Glute max + medius</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Same setup, one foot on floor, other leg extended. Drive through working heel. Hold the top for 1 sec. Add weight on chest when bodyweight feels easy (5kg plate, then 10kg).</div>
+<a href="https://www.youtube.com/results?search_query=single+leg+hip+thrust+form" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card">
+<h4><span><span class="ex-num">D3</span>Lying Leg Curl</span></h4>
+<div class="ex-meta">
+<span>4 sets × 8-12 reps</span><span>Tempo 3-1-1-2</span><span>Rest 75s</span><span>Hamstring (knee flexion)</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Hips pinned to bench — don't let them rise (cheat). 3-second eccentric (lowering). Squeeze hams hard at top. Point toes for hamstring emphasis (vs flex for calves).</div>
+<div class="ex-cue"><strong>Why:</strong> You can't safely do RDLs with a heavy load. Leg curls are how you build hamstrings safely. Hams + glutes = the engine for everything.</div>
+<a href="https://www.youtube.com/results?search_query=lying+leg+curl+form+hamstring" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card">
+<h4><span><span class="ex-num">D4</span>Seated Leg Curl</span></h4>
+<div class="ex-meta">
+<span>3 sets × 10-15 reps</span><span>Tempo 2-1-1-1</span><span>Rest 60s</span><span>Hamstring (different angle)</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Different angle = different stimulus. Long head of hamstring more involved when the hip is flexed (seated position). Pause at the bottom for 1 sec. Slow control.</div>
+<a href="https://www.youtube.com/results?search_query=seated+leg+curl+form+hamstring" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card">
+<h4><span><span class="ex-num">D5</span>Cable Hip Abduction (standing)</span></h4>
+<div class="ex-meta">
+<span>3 sets × 12-15 reps each side</span><span>Tempo 2-1-1-1</span><span>Rest 45s/side</span><span>Glute medius + minimus</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Cable around ankle, stand side-on to stack. Slight forward lean from hips. Lift leg out and slightly back (not just straight to side). Squeeze upper glute. Slow back.</div>
+<div class="ex-cue"><strong>Why:</strong> Glute medius is the muscle that prevents hip drop and protects your low back during walking and running. Most lifters never train it directly. You need to.</div>
+<a href="https://www.youtube.com/results?search_query=standing+cable+hip+abduction+glute+medius" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card">
+<h4><span><span class="ex-num">D6</span>Single-Leg Glute Cable Kickback (replaces cable pull-through)</span></h4>
+<div class="ex-meta">
+<span>3 sets × 12-15 reps each side</span><span>Tempo 2-1-2-1</span><span>Rest 45s/side</span><span>Glute max isolation, no hinge</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Cable strap on ankle, facing the cable stack. Hold the frame for stability. Kick the working leg straight back and slightly up — squeeze the glute hard at the top for 1 sec. Slow return. Keep the working leg straight (slight knee bend OK).</div>
+<div class="ex-cue"><strong>Why this replaces cable pull-through:</strong> A hip hinge under load — even "light" — is a known aggravator for torn annulus fibrosus. The single-leg cable kickback hits the same glute max muscle without ANY hinge pattern, ANY spinal load. Same outcome, zero risk.</div>
+<a href="https://www.youtube.com/results?search_query=single+leg+cable+kickback+glute" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card">
+<h4><span><span class="ex-num">D7</span>Standing Calf Raise (volume day)</span></h4>
+<div class="ex-meta">
+<span>3 sets × 10-15 reps</span><span>Tempo 2-2-1-1</span><span>Rest 45s</span><span>Gastroc</span>
+</div>
+<a href="https://www.youtube.com/results?search_query=standing+calf+raise+form" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card" style="border-left-color:#c0392b;">
+<h4><span><span class="ex-num">D8</span>Side Plank with Hip Lift</span></h4>
+<div class="ex-meta">
+<span>3 sets × 8-12 reps each side</span><span>Tempo controlled</span><span>Rest 30s</span><span>Anti-lateral flexion</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Side plank position on forearm. Lift and lower hips with control — full range. Don't let them sag at the bottom. Body in straight line at the top.</div>
+<a href="https://www.youtube.com/results?search_query=side+plank+hip+lift+form" target="_blank">Watch form (YouTube)</a>
+</div>
+
+<div class="exercise-card" style="border-left-color:#c0392b;">
+<h4><span><span class="ex-num">D9</span>Bird Dog (slow, controlled)</span></h4>
+<div class="ex-meta">
+<span>3 sets × 8 reps each side</span><span>Tempo 2sec hold each rep</span><span>Rest 30s</span><span>Spinal stability</span>
+</div>
+<div class="ex-cue"><strong>Cue:</strong> Hands and knees, neutral spine. Extend opposite arm + leg, hold 2 seconds, return slowly. Hips MUST stay level — don't rotate. This trains the deep multifidus muscles that protect each vertebral level.</div>
+<div class="ex-cue"><strong>Why:</strong> McGill (the world's leading spine researcher) calls this one of "the big 3" for disc rehabilitation. Non-negotiable for you.</div>
+<a href="https://www.youtube.com/results?search_query=bird+dog+exercise+mcgill" target="_blank">Watch form (YouTube)</a>
+</div>
+</section>
+
+<section id="warmups">
+<h2>8. Warm-up Protocols (5-10 min per day)</h2>
+
+<div class="callout">
+<strong>Skip the warm-up at your peril.</strong> At 48 with a disc injury, cold lifting is how injuries happen. Eight minutes is non-negotiable.
+</div>
+
+<h3>Day A (Upper Push) — 8 min</h3>
+<table>
+<tr><th>Time</th><th>What</th></tr>
+<tr><td>0-3 min</td><td>Easy bike or rower — get blood flowing, raise body temp</td></tr>
+<tr><td>3-4 min</td><td>Arm circles forward 10, backward 10. Shoulder rolls back 10.</td></tr>
+<tr><td>4-5 min</td><td>Band pull-aparts 2 × 15 (rear delt + rotator cuff activation)</td></tr>
+<tr><td>5-6 min</td><td>Push-up to downward dog 8 reps (chest stretch + shoulder ROM)</td></tr>
+<tr><td>6-7 min</td><td>Wall slides 2 × 10 (scap mobility)</td></tr>
+<tr><td>7-8 min</td><td>First exercise: 2 ramp-up sets at 50% then 70% load before working sets</td></tr>
+</table>
+
+<h3>Day B (Lower Quad) — 10 min</h3>
+<table>
+<tr><th>Time</th><th>What</th></tr>
+<tr><td>0-3 min</td><td>Easy bike — knees and hips moving</td></tr>
+<tr><td>3-5 min</td><td>Banded clamshells 2 × 12/side (glute medius activation — critical)</td></tr>
+<tr><td>5-6 min</td><td>Bodyweight glute bridges 2 × 12 (glute activation)</td></tr>
+<tr><td>6-7 min</td><td>Hip CARs (controlled articular rotations) 5/side each direction</td></tr>
+<tr><td>7-8 min</td><td>Bodyweight squats to box 2 × 10 (groove the pattern)</td></tr>
+<tr><td>8-10 min</td><td>Hack squat: 2 ramp-up sets at 40%, 60%, 80% load before working sets</td></tr>
+</table>
+
+<h3>Day C (Upper Pull) — 8 min</h3>
+<table>
+<tr><th>Time</th><th>What</th></tr>
+<tr><td>0-3 min</td><td>Rower easy pace</td></tr>
+<tr><td>3-4 min</td><td>Cat-cow 10 reps (spinal mobility)</td></tr>
+<tr><td>4-5 min</td><td>Band pull-aparts 2 × 15 (scap activation)</td></tr>
+<tr><td>5-6 min</td><td>Dead hang from pull-up bar 30sec (decompress spine — bonus)</td></tr>
+<tr><td>6-7 min</td><td>Scap pull-ups (hanging, just shrug down) 8 reps</td></tr>
+<tr><td>7-8 min</td><td>First exercise: 2 ramp-up sets before working sets</td></tr>
+</table>
+
+<h3>Day D (Lower Posterior) — 10 min</h3>
+<table>
+<tr><th>Time</th><th>What</th></tr>
+<tr><td>0-3 min</td><td>Walking incline treadmill (warm hips and hams)</td></tr>
+<tr><td>3-5 min</td><td>Banded glute bridges 2 × 15 (band above knees)</td></tr>
+<tr><td>5-6 min</td><td>Hip flexor stretch (couch stretch) 30sec/side</td></tr>
+<tr><td>6-7 min</td><td>Banded hip thrusts 2 × 12 (groove the pattern)</td></tr>
+<tr><td>7-8 min</td><td>McGill big 3 mini-circuit: 5 bird dogs/side, 5 dead bugs/side, 20sec side plank/side</td></tr>
+<tr><td>8-10 min</td><td>Hip thrust: 2 ramp-up sets before working sets</td></tr>
+</table>
+
+<div class="callout callout-blue">
+<strong>Daily desk-worker addition (do this even on rest days):</strong> 30 seconds of hanging from a pull-up bar at the end of every workout decompresses the spine and is excellent for your disc. Add it to every session.
+</div>
+</section>
+
+<section id="functional">
+<h2>9. Functional Training, Walking, Skipping &amp; Stretching</h2>
+
+<div class="callout">
+<strong>Why this matters at 48:</strong> Pure hypertrophy training builds size but doesn't build resilience for everyday movement. Functional work, mobility and conditioning fill the gaps. Plus you wanted variety — this gives you it.
+</div>
+
+<h3>Daily walking (foundation of recovery)</h3>
+<table>
+<tr><th>When</th><th>Type</th><th>Duration</th></tr>
+<tr><td>Every day</td><td>Total daily steps</td><td>8,000-10,000 minimum (NEAT for recomp)</td></tr>
+<tr><td>Tuesday or Thursday morning</td><td>Brisk incline walk (treadmill 5-8% incline OR outdoor hill)</td><td>20-30 min</td></tr>
+<tr><td>Saturday or Sunday</td><td>Outdoor walk (Charlestown or Glenrock area, scenic)</td><td>30-60 min — sun + nature + low cortisol</td></tr>
+</table>
+
+<h3>Skipping (low-impact conditioning + calf development + coordination)</h3>
+<div class="callout-blue callout">
+<strong>Why skipping fits perfectly:</strong> low impact (less than running), develops calves (which need extra work), builds wrist + forearm endurance, boosts coordination. Spine-friendly when done with relaxed posture. <strong>Don't skip on lifting day mornings</strong> — fresh ankles + calves for legs day matter.
+</div>
+<table>
+<tr><th>When</th><th>Protocol</th><th>Build-up</th></tr>
+<tr><td>Wednesday OR Saturday (off lifting day)</td><td>10-min skipping session</td><td>Wks 1-2: 30sec on / 30sec off × 10. Wks 3-6: 45/15 × 10. Wks 7-12: 60sec on / 30sec off × 8 with 2-3 styles (basic, alternating feet, double under attempts).</td></tr>
+<tr><td>Optional finisher</td><td>3 × 1 min skipping at end of Day A or C</td><td>Use as a metabolic finisher when energy is high. Skip during Building/Peak phases — recovery cost is real.</td></tr>
+</table>
+
+<h3>Mobility &amp; stretching (15 min, 2-3x/week)</h3>
+<p>Don't stretch cold. Don't static-stretch immediately before lifting (reduces force output 5-15% per Behm 2016). Static stretching is for AFTER training or on rest days.</p>
+
+<h4>Post-training stretch (5-10 min, end of every session)</h4>
+<table>
+<tr><th>Stretch</th><th>Duration</th><th>Target</th></tr>
+<tr><td>90/90 hip stretch</td><td>30sec each side × 2</td><td>Hip mobility (critical with desk job + L5/S1)</td></tr>
+<tr><td>Couch stretch (hip flexor)</td><td>45sec each side</td><td>Anterior hip — tight hip flexors pull on lumbar disc</td></tr>
+<tr><td>Standing forward fold (knees soft)</td><td>30sec × 2</td><td>Hamstrings — careful, slight knee bend protects disc</td></tr>
+<tr><td>Doorway pec stretch</td><td>30sec each arm</td><td>Pec minor — counter desk posture</td></tr>
+<tr><td>Lat stretch (overhead, lean to side)</td><td>30sec each side</td><td>Lats + side</td></tr>
+<tr><td>Pec deck stretch (chest stretch on doorframe)</td><td>30sec</td><td>Anterior shoulder</td></tr>
+<tr><td>Wrist + forearm circles + flexor/extensor stretch</td><td>30sec each</td><td>Forearms (with all the pressing + grip work)</td></tr>
+</table>
+
+<h4>Dedicated mobility session (Wednesday or Sunday, 20 min)</h4>
+<table>
+<tr><th>Block</th><th>What</th></tr>
+<tr><td>Spinal articulation (5 min)</td><td>Cat-cow × 10. Bird-dog × 8/side. Dead bug × 8/side. Cobra (light, no compression) × 8.</td></tr>
+<tr><td>Hip mobility (8 min)</td><td>90/90 transitions × 8/side. Half-kneeling hip flexor stretch × 45sec/side. Cossack squat × 6/side. Frog stretch × 1 min.</td></tr>
+<tr><td>Thoracic spine (4 min)</td><td>Foam roller t-spine extensions × 10. Open book × 8/side. Standing thoracic rotations × 8/side.</td></tr>
+<tr><td>Shoulder mobility (3 min)</td><td>Wall slides × 12. Banded shoulder dislocates × 10. CARs × 5/side.</td></tr>
+</table>
+
+<h3>Functional training options (one finisher per week, optional)</h3>
+<table>
+<tr><th>Move</th><th>How</th><th>Why functional</th></tr>
+<tr><td><strong>Loaded carries</strong> (already in Day B)</td><td>Suitcase + farmer's carry</td><td>Translates directly to real-life lifting (groceries, tools, kids). Trains anti-flexion core.</td></tr>
+<tr><td><strong>Sled push (if Revo has)</strong></td><td>3 × 20m moderate weight</td><td>Concentric-only = zero soreness, big conditioning hit, knee + hip friendly.</td></tr>
+<tr><td><strong>Battle ropes (if available)</strong></td><td>30sec on / 30sec off × 6</td><td>Upper body conditioning, low spine load. Great rear delt + grip burner.</td></tr>
+<tr><td><strong>Kettlebell swings</strong> (only after physio clears hip hinge)</td><td>5 × 10 reps, light KB (12-16kg)</td><td>Posterior chain power. NOT until you've cleared hip hinges with physio for the disc.</td></tr>
+<tr><td><strong>Dead hang holds</strong></td><td>3 × 30-60sec</td><td>Spinal decompression + grip + shoulder stability. Already in Day C as the new C9.</td></tr>
+<tr><td><strong>Turkish get-up</strong> (light)</td><td>3 × 3 reps each side, 8-12kg KB</td><td>Total-body movement integration. Caution: requires good shoulder mobility. Skip if shoulder gets twingy.</td></tr>
+</table>
+
+<h3>Sample weekly schedule (with all the extras)</h3>
+<table>
+<tr><th>Day</th><th>Main session</th><th>Extras</th></tr>
+<tr><td>Monday</td><td>Day A — Upper Push (5:30am)</td><td>Post-session 5min stretch. 30sec dead hang.</td></tr>
+<tr><td>Tuesday</td><td>Day B — Lower Quad (5:30am)</td><td>20min incline walk (afternoon if possible). Post-stretch hips.</td></tr>
+<tr><td>Wednesday</td><td>REST</td><td>20min mobility session OR 10min skipping. Outdoor walk.</td></tr>
+<tr><td>Thursday</td><td>Day C — Upper Pull (5:30am)</td><td>Post-session 5min stretch. Dead hang.</td></tr>
+<tr><td>Friday</td><td>Day D — Lower Posterior (5:30am)</td><td>Post-stretch hips + glutes. Bird dog + side plank extras.</td></tr>
+<tr><td>Saturday</td><td>REST</td><td>30-60min outdoor walk + 10min skipping if energy high.</td></tr>
+<tr><td>Sunday</td><td>REST</td><td>20min mobility session. Outdoor walk. Meal prep.</td></tr>
+</table>
+
+<div class="callout">
+<strong>3-day fallback if life gets busy:</strong> drop Day D. Schedule Day A (Mon), Day B (Wed), Day C (Fri). Add 5min hip thrust mini-session (3 sets) at end of Day B to cover glute volume. Walk + skip + stretch fill the other days.
+</div>
+</section>
+
+<section id="cardio">
+<h2>10. Cardio Protocol</h2>
+
+<div class="callout">
+<strong>Less is more for your goal.</strong> You're recomping on Reta — appetite is suppressed, recovery is harder, and cardio competes for the calories you need for muscle growth. We do enough for cardiovascular health and recovery, no more.
+</div>
+
+<h3>Weekly cardio dose</h3>
+<table>
+<tr><th>Type</th><th>When</th><th>Duration</th><th>Why</th></tr>
+<tr><td><strong>LISS Walk #1</strong></td><td>Tuesday OR Thursday morning (before training)</td><td>20-30 min, incline 5-8%, brisk pace</td><td>Active recovery from previous day. Doesn't impact lifts.</td></tr>
+<tr><td><strong>LISS Walk #2</strong></td><td>Saturday or Sunday (active recovery day)</td><td>30-45 min outside walk</td><td>Mental health + low-grade cardiovascular load + sun = vit D + cortisol management.</td></tr>
+<tr><td><strong>Optional finisher</strong></td><td>End of Day B or D (lower days)</td><td>5-10 min — sled push, KB swings, or assault bike intervals (8 × 20sec on / 40sec off)</td><td>Conditioning if energy allows. SKIP during Building or Peak phases — recovery cost is too high.</td></tr>
+<tr><td><strong>Daily steps</strong></td><td>Every day</td><td>8,000-10,000 steps</td><td>NEAT (non-exercise activity thermogenesis) is the silent recomp lever. Get a watch reminder.</td></tr>
+</table>
+
+<div class="callout callout-red">
+<strong>What to AVOID:</strong>
+<ul style="margin-top:6px;">
+<li>HIIT classes (F45, CrossFit) during this 12-week block — too much CNS overlap with lifting</li>
+<li>Long-distance running — wrecks recovery, competes with hypertrophy signals (interference effect)</li>
+<li>Spin/Zumba in volume — fine occasionally, but adds stress without serving your goal</li>
+<li>Cardio same morning as legs — kills leg session quality</li>
+</ul>
+</div>
+</section>
+
+<section id="deload">
+<h2>11. Deload Weeks (5 &amp; 10)</h2>
+
+<div class="callout callout-blue">
+<strong>Deloads are when you actually grow.</strong> Lifting breaks the muscle down. Recovery rebuilds it bigger. Skipping deloads = injury at 48, especially with the eGFR concern. Don't be a hero.
+</div>
+
+<h3>Deload protocol</h3>
+<ul>
+<li><strong>Same exercises, same days</strong> — keep the rhythm</li>
+<li><strong>50% volume</strong> — half the sets (e.g. 4 sets becomes 2 sets)</li>
+<li><strong>60% load</strong> — if you were lifting 100kg, drop to 60kg</li>
+<li><strong>Same reps, same tempo</strong> — focus on perfect form</li>
+<li><strong>RPE 5</strong> — should feel almost too easy</li>
+<li><strong>NO finishers, NO extras</strong> — get in, do the work, get out</li>
+<li><strong>Skip the optional cardio finisher</strong></li>
+<li><strong>Sleep 8+ hours</strong> if possible — this is where the magic happens</li>
+</ul>
+
+<h3>Signs you NEED to deload (don't wait for week 5/10 if you see these)</h3>
+<ul>
+<li>Resting heart rate elevated 5+ bpm above your baseline for 3+ days</li>
+<li>Sleep getting worse despite DSIP</li>
+<li>Mood dropping, irritability up</li>
+<li>Joint aches that don't resolve in 48 hours</li>
+<li>Top set of last week's lift now feels like a struggle at the same weight</li>
+<li>Loss of training motivation lasting more than 2 sessions</li>
+<li>Minor injuries or niggles starting to show up</li>
+</ul>
+</section>
+
+<section id="intensity">
+<h2>12. Intensity Techniques (when to use, when they backfire)</h2>
+
+<div class="callout callout-red">
+<strong>Cardinal rule:</strong> Intensity techniques are stress multipliers. Use them when you've already optimised volume, frequency, RIR and form. Adding them too early or too often = wrecked recovery + plateau, not faster gains. <strong>Save them for Building and Peak phases (weeks 6+) and last set only of isolation work.</strong>
+</div>
+
+<h3>Drop sets — when and how</h3>
+<table>
+<tr><th>What</th><th>How</th><th>When to use</th></tr>
+<tr><td>Standard drop set</td><td>Hit failure (or 0 RIR), drop weight 25-30%, immediately do max reps. 1-2 drops max.</td><td>Last set of isolation only. Once per workout maximum. Never on compound lifts.</td></tr>
+<tr><td>Mechanical drop set</td><td>Same load, switch to easier mechanical position when fatigued (e.g. incline DB curl → standing DB curl)</td><td>Better than load drops for some moves. Useful for biceps, lateral raises.</td></tr>
+<tr><td>Triple drop</td><td>Failure → drop → failure → drop → failure</td><td>Peak phase only. Once a week max. Wrecks recovery — use sparingly.</td></tr>
+</table>
+
+<p><strong>Best uses in your program:</strong> Last set of leg extensions (B5), lateral raises (A4), tricep pushdowns (A7), preacher curls (C6). Skip on hack squat, hip thrust, lat pulldown — too much CNS load.</p>
+
+<h3>Rest-pause — when and how</h3>
+<table>
+<tr><th>What</th><th>How</th><th>When to use</th></tr>
+<tr><td>Rest-pause</td><td>Hit failure, rest 15 seconds, pump out as many more reps as possible. Repeat 1-2 times.</td><td>Compounds where extra mechanical tension matters. Last set of leg press, chest-supported row, hip thrust during Peak phase.</td></tr>
+<tr><td>Myo-reps (Borge Fagerli)</td><td>Activator set to ~RIR 1, rest 15 sec, do 3-5 reps, rest 15 sec, repeat 3-5 sets.</td><td>Time-efficient density training. Good for short sessions.</td></tr>
+</table>
+
+<h3>Supersets — when they help, when they don't</h3>
+<table>
+<tr><th>Type</th><th>Use when</th><th>Don't use when</th></tr>
+<tr><td><strong>Antagonist superset</strong> (e.g. bicep + tricep)</td><td>You want to save time. Performance often holds up.</td><td>Compound lifts where you need full recovery between sets.</td></tr>
+<tr><td><strong>Agonist superset</strong> (same muscle, e.g. flat press + flyes)</td><td>You want metabolic stress finisher. Last 5min of session.</td><td>Strength-focused phases. Wrecks load capacity.</td></tr>
+<tr><td><strong>Pre-exhaust</strong> (isolation → compound, e.g. flyes → press)</td><td>Trying to bring up a lagging muscle that's getting stolen by stronger synergists.</td><td>You want to lift heavy on the compound — pre-exhaust kills load.</td></tr>
+</table>
+
+<h3>When intensity techniques are COUNTERPRODUCTIVE</h3>
+<ul>
+<li><strong>Foundation phase (weeks 1-4)</strong> — you're building movement quality and base. Adding intensity techniques masks form errors.</li>
+<li><strong>Reta-day fatigue</strong> — Mon and Thu post-Reta are low-recovery days. Don't push to failure on these.</li>
+<li><strong>If sleep was poor</strong> — drop them entirely that session.</li>
+<li><strong>On compound lifts (squat-pattern, press, hip thrust)</strong> — failure form on these = injury risk. Stay 1-2 RIR always.</li>
+<li><strong>If you're plateaued</strong> — counter-intuitive: a plateau means you're already over-doing it. Deload first, then re-add intensity.</li>
+</ul>
+
+<h3>Recommended intensity rotation across the 12 weeks</h3>
+<table>
+<tr><th>Phase</th><th>What to use</th></tr>
+<tr><td>Foundation (1-4)</td><td>NONE. Just clean reps at RIR 2-3.</td></tr>
+<tr><td>Deload (5)</td><td>NONE. Recovery only.</td></tr>
+<tr><td>Building (6-9)</td><td>1× drop set/week on a chosen isolation. Antagonist supersets for time efficiency.</td></tr>
+<tr><td>Deload (10)</td><td>NONE.</td></tr>
+<tr><td>Peak (11-12)</td><td>Drop set on last set of all isolation. Rest-pause on 1 compound per session. Pre-exhaust your weakest area.</td></tr>
+</table>
+</section>
+
+<section id="weakpoint">
+<h2>13. Weak Point Specialisation</h2>
+
+<div class="callout">
+<strong>What this is:</strong> The ability to bring up a lagging body part without overtraining everything else. The mistake most people make is adding 8 sets of biceps when biceps are weak — that wrecks recovery globally. Smart specialisation is targeted, not maximalist.
+</div>
+
+<h3>Step 1: Identify your real weak points (not just what you THINK is weak)</h3>
+<ol>
+<li>Stand in the mirror, neutral pose. Take photos: front, side, back. Honest assessment.</li>
+<li>What looks small relative to the rest? That's a real weak point. Common ones for 48yo intermediate males: rear delts, hamstrings, upper chest, lateral delts.</li>
+<li>What looks fine? Don't add volume there.</li>
+</ol>
+
+<h3>Step 2: Apply the specialisation rule</h3>
+<table>
+<tr><th>Action</th><th>Detail</th></tr>
+<tr><td>Add 4-6 sets per week to the weak muscle</td><td>NOT 10. NOT 12. Four to six is the sweet spot.</td></tr>
+<tr><td>REMOVE 2-3 sets from a different muscle</td><td>If chest is overdeveloped, drop 3 sets from chest to fund the new shoulder volume. Total weekly fatigue stays constant.</td></tr>
+<tr><td>Place specialisation work FIRST in the session</td><td>Fresh = best growth stimulus. Weak chest? Start the workout with chest, not finish.</td></tr>
+<tr><td>Use the reps you respond to (test it)</td><td>Some lifters grow on heavy 6-8s for a stubborn muscle. Others grow on 15-20s. Try one phase of each, see which moves the needle.</td></tr>
+<tr><td>Specialisation block = 8 weeks max</td><td>Then return to balanced programming. Specialisation indefinitely creates new imbalances.</td></tr>
+</table>
+
+<h3>Common weak point fixes (pick max 1 at a time)</h3>
+<table>
+<tr><th>Weak point</th><th>Add (4-6 sets/week)</th><th>Cut from</th></tr>
+<tr><td>Rear delts (most common at 48 from desk work)</td><td>3 sets reverse pec deck Day A + 3 sets cable face pull Day C extra</td><td>1 set chest, 1 set lat pulldown</td></tr>
+<tr><td>Upper chest</td><td>2 extra sets incline DB press Day A + 2 sets cable low-to-high crossover Day C as finisher</td><td>2 sets flat work, 1 set tricep</td></tr>
+<tr><td>Lateral delts (width)</td><td>4 sets cable lateral raise Day A + 2 sets DB lateral raise Day C as superset with rows</td><td>2 sets tricep, 1 set chest</td></tr>
+<tr><td>Hamstrings</td><td>3 sets nordic curl negatives Day D + 2 sets seated leg curl Day B as accessory</td><td>1 set hip abduction, 2 sets calf</td></tr>
+<tr><td>Calves (genetically tough)</td><td>Add seated calf raise to Day A as filler between sets (3 sets) + heavy 6-rep standing calf raises on Day D</td><td>Already in plan twice — just intensify rather than add days</td></tr>
+<tr><td>Forearms/grip</td><td>3 sets thick-grip dead hang holds + 3 sets plate pinches Day C</td><td>1 set bicep, 1 set forearm wrist curl (replace with grip work)</td></tr>
+</table>
+
+<div class="callout callout-red">
+<strong>Don't specialise on more than ONE muscle at a time.</strong> "I want bigger arms AND shoulders AND chest" = nothing grows because everything's overtrained. Pick ONE for 8 weeks, then assess, then move to another.
+</div>
+</section>
+
+<section id="tracker">
+<h2>14. Weight Tracker (12 weeks)</h2>
+
+<p style="font-size:14px;color:#6b6b6b;">Tap into any cell to log your top working set weight × reps (e.g. "60×10" or "60×10,8,7"). Saves automatically. Yellow cells = deload weeks.</p>
+
+<div class="callout">
+<strong>How to log:</strong> Just write the heaviest set you did. Format: weight × reps. Example: "70x10" means 70kg for 10 reps. Or "70x10,9,8" for three sets dropping reps.
+</div>
+
+<div class="collapsible">
+<div class="collapsible-header" onclick="toggleCol(this)">Day A — Upper Push exercises</div>
+<div class="collapsible-body" id="tracker-A"></div>
+</div>
+
+<div class="collapsible">
+<div class="collapsible-header" onclick="toggleCol(this)">Day B — Lower Quad exercises</div>
+<div class="collapsible-body" id="tracker-B"></div>
+</div>
+
+<div class="collapsible">
+<div class="collapsible-header" onclick="toggleCol(this)">Day C — Upper Pull exercises</div>
+<div class="collapsible-body" id="tracker-C"></div>
+</div>
+
+<div class="collapsible">
+<div class="collapsible-header" onclick="toggleCol(this)">Day D — Lower Posterior exercises</div>
+<div class="collapsible-body" id="tracker-D"></div>
+</div>
+</section>
+
+<section>
+<h2>15. Progress benchmarks (12-week targets)</h2>
+<table>
+<tr><th>Metric</th><th>Week 1 baseline</th><th>Week 12 target</th></tr>
+<tr><td>Bodyweight</td><td>90kg</td><td>91-93kg (slow lean gain on Reta)</td></tr>
+<tr><td>Waist (navel)</td><td>Measure week 1</td><td>Same or -1cm despite weight gain</td></tr>
+<tr><td>Hack squat top set</td><td>Find 8RM</td><td>+15-20% load OR +3 reps at same weight</td></tr>
+<tr><td>Incline DB press</td><td>Find 8RM</td><td>Move up one DB increment (e.g. 22.5kg → 25kg)</td></tr>
+<tr><td>Lat pulldown</td><td>Find 10RM</td><td>+10-15% load</td></tr>
+<tr><td>Hip thrust</td><td>Find 10RM</td><td>+15-20kg on the bar</td></tr>
+<tr><td>Dead Hang</td><td>Measure starting hold time (sec) in week 1</td><td>3 × 60 seconds (building from 30 sec week 1)</td></tr>
+<tr><td>Suitcase carry weight</td><td>Find weight you can carry 30m</td><td>+8-12kg</td></tr>
+<tr><td>Resting HR</td><td>Track day 1</td><td>-3-5 bpm (cardio fitness improving)</td></tr>
+<tr><td>Sleep quality (1-10)</td><td>Track week 1</td><td>+1 (improvement)</td></tr>
+</table>
+</section>
+
+<section id="nutrition">
+<h2>16. Nutrition for Hypertrophy (research-backed targets)</h2>
+
+<div class="callout callout-blue">
+<strong>The honest truth about your goal:</strong> +5kg of pure lean muscle in 12 weeks is unrealistic for any 48-year-old intermediate, even on TRT + HGH + Mast. <strong>Realistic 12-week target: 1.5-2.5kg of lean tissue + 1-2kg fat loss = visibly more "ripped"</strong>. Patience compounds — 2kg of lean tissue four times a year = 8kg/year, life-changing.
+</div>
+
+<h3>Daily protein (research-backed for hypertrophy)</h3>
+<table>
+<tr><th>Source</th><th>Recommendation</th><th>Your number (90kg)</th></tr>
+<tr><td>Morton 2018 meta-analysis (gold standard)</td><td>1.6-2.2g per kg bodyweight</td><td>144-198g protein/day</td></tr>
+<tr><td>Helms et al. 2014 (lean dieters)</td><td>2.3-3.1g per kg LEAN bodyweight (more conservative)</td><td>180-240g if dieting hard</td></tr>
+<tr><td>This program target (kidney-confirmed normal)</td><td>2.2g per kg</td><td><strong>200g/day</strong></td></tr>
+<tr><td>If real CKD confirmed</td><td>1.3g per kg max (renal-protective)</td><td><strong>120g/day max</strong></td></tr>
+</table>
+
+<h3>Protein distribution (matters as much as total)</h3>
+<ul>
+<li>Spread protein across <strong>4-5 meals</strong> of 30-50g each.</li>
+<li>Each meal hits the leucine threshold (2.5-3g leucine = ~30g whey or 40g lean meat) — triggers maximum muscle protein synthesis.</li>
+<li><strong>Pre-bed slow protein matters at 48</strong> — 30g casein or 200g Greek yoghurt. Overnight muscle protein synthesis without it drops significantly.</li>
+<li>Post-workout protein within 2 hours = optimal but not urgent. The 30-min "anabolic window" was overstated by old research.</li>
+</ul>
+
+<h3>Calorie targets — the Reta complication</h3>
+<table>
+<tr><th>Scenario</th><th>Calories/day</th><th>Expected outcome</th></tr>
+<tr><td><strong>Recomp on Reta (current plan)</strong></td><td>~2,450 kcal (functional maintenance)</td><td>Slow lean gain (~0.5-1.5kg over 12 wks) + fat loss (~1-2kg). Best of both worlds, slowest size gain.</td></tr>
+<tr><td><strong>Pure lean bulk (would need to pause Reta)</strong></td><td>~2,800-3,000 kcal (200-300 kcal surplus)</td><td>Faster muscle gain (~2-3kg over 12 wks) + some fat (~1-2kg). Not on Reta — appetite suppression makes surplus impossible.</td></tr>
+<tr><td><strong>Aggressive bulk (NOT recommended)</strong></td><td>~3,200+ kcal (500+ kcal surplus)</td><td>~3-4kg muscle + ~3-4kg fat. Lots of cutting later. Wastes time at 48.</td></tr>
+</table>
+
+<div class="callout callout-red">
+<strong>Real talk:</strong> If you want the +5kg lean muscle in 12 weeks specifically, you have to pause Reta for that 12-week growth phase, eat 200-300 kcal surplus, and re-add Reta after to lean out. Trying to "bulk on Reta" is fighting your own pharmacology — the appetite suppression is the whole point of the drug. <strong>I'd recommend keeping Reta + recomp + accepting slower muscle gain. Your gut needs the recomp window anyway.</strong>
+</div>
+
+<h3>Carbs &amp; fats (the rest of the macro equation)</h3>
+<table>
+<tr><th>Macro</th><th>Recomp scenario (200g protein, 2,450 kcal)</th><th>Why</th></tr>
+<tr><td>Carbs</td><td>230g (~37% kcal)</td><td>Fuels training. Time most carbs around the workout (post-workout shake + dinner). Peri-workout 50g + post-workout 60g + dinner 80g + spread 40g.</td></tr>
+<tr><td>Fats</td><td>80g (~30% kcal)</td><td>Hormonal support (especially on TRT). Mostly mono (EVOO, avocado, macadamias) + omega-3 (cod liver oil, salmon).</td></tr>
+</table>
+
+<h3>Nutrient timing for max growth (research-supported)</h3>
+<ul>
+<li><strong>Pre-workout (1-2hrs before lifting)</strong>: 30-40g carbs + 20-30g protein. Banana + whey is the standard.</li>
+<li><strong>Intra-workout</strong>: optional. 10g EAAs in water if session &gt;90min. Not needed for your 60-75 min sessions.</li>
+<li><strong>Post-workout (within 2hrs)</strong>: 40-50g protein + 50-80g carbs. Whey + banana + jasmine rice or sushi.</li>
+<li><strong>Pre-bed (within 30min of sleep)</strong>: 20-30g slow protein. Greek yoghurt + collagen.</li>
+</ul>
+
+<h3>Supplements with the strongest evidence for hypertrophy</h3>
+<table>
+<tr><th>Supplement</th><th>Evidence</th><th>You're already on it?</th></tr>
+<tr><td>Creatine monohydrate 5g</td><td>Strongest evidence of any supp for strength + size</td><td>Yes — 10g (now reduced to 5g pending kidney check)</td></tr>
+<tr><td>Whey protein</td><td>Convenient protein hit</td><td>Yes</td></tr>
+<tr><td>Caffeine pre-workout</td><td>Improves training performance ~3-5%</td><td>Yes (your morning coffee)</td></tr>
+<tr><td>Omega-3 (2-3g EPA+DHA)</td><td>Anti-inflammatory, helps mTOR signalling, joint protection</td><td>Yes (cod liver oil)</td></tr>
+<tr><td>Vitamin D (sufficient levels)</td><td>Linked to muscle protein synthesis. You're optimal at 150 nmol/L.</td><td>Yes (2,000 IU)</td></tr>
+<tr><td>Beta-alanine 3-5g/day</td><td>Buffers muscle pH. Helps sets in the 8-15 rep range. Modest effect.</td><td>Optional add — buy as separate powder or pre-workout</td></tr>
+</table>
+
+<div class="callout">
+<strong>Your meal plan covers all of this.</strong> See the linked Meal Plan file for full meal structure, schedule and shopping list. Don't double-program nutrition — use the meal plan as the source of truth.
+</div>
+</section>
+
+<section>
+<h2>17. Critical caveats</h2>
+<ul>
+<li><strong>STOP any exercise that reproduces low-back pain.</strong> Not soreness — pain. Especially nerve-type pain (shooting, tingling, numbness in legs). Sub the exercise out and message a physio.</li>
+<li><strong>This program assumes your eGFR is normal</strong> (creatine artifact, not real CKD). If cystatin C confirms real CKD, drop volume to 3 sets per exercise across the board, skip optional cardio finishers, and protein drops to 1.3g/kg as per the meal plan. Talk to your nephrologist before continuing if confirmed.</li>
+<li><strong>If Hct climbs above 0.52</strong> — pause heavy training, get phlebotomy first. High Hct + heavy lifting = clot risk.</li>
+<li><strong>Reta-day fatigue is real.</strong> Mon and Thu (after Sun/Wed Reta) = lowest energy. Schedule those as upper days where possible (less systemic load than legs).</li>
+<li><strong>Not coaching credentials.</strong> This is structured programming based on evidence-based hypertrophy principles, your profile, and your stated constraints. Hire an in-person coach for 1-2 sessions in week 1 to check form on the key lifts (hack squat, hip thrust, chest-supported row). Worth the $200.</li>
+<li><strong>Re-test bloods at week 6 and week 12.</strong> Hct, eGFR, ApoB, full hormone panel. Adjust the program based on data.</li>
+</ul>
+</section>
+
+</main>
+
+<script>
+// Exercises by day for tracker
+const exercises = {
+  A: [
+    {id:'A1', name:'Incline DB Press'},
+    {id:'A2', name:'Machine Chest Press / Hammer Strength Incline'},
+    {id:'A3', name:'Cable Crossover (high-to-low)'},
+    {id:'A4', name:'Seated DB Lateral Raise'},
+    {id:'A5', name:'Seated Machine Shoulder Press'},
+    {id:'A6', name:'Overhead Rope Tricep Extension'},
+    {id:'A7', name:'Tricep Pushdown (V-bar)'},
+    {id:'A8', name:'Pallof Press'},
+    {id:'A9', name:'Dead Bug'}
+  ],
+  B: [
+    {id:'B1', name:'Leg Press (PRIMARY)'},
+    {id:'B2', name:'Hack Squat (secondary)'},
+    {id:'B3', name:'Bulgarian Split Squat'},
+    {id:'B4', name:'Reverse Lunge'},
+    {id:'B5', name:'Leg Extension'},
+    {id:'B6', name:'Standing Calf Raise'},
+    {id:'B7', name:'Seated Calf Raise'},
+    {id:'B8', name:'Suitcase Carry'}
+  ],
+  C: [
+    {id:'C1', name:'Lat Pulldown'},
+    {id:'C2', name:'Chest-Supported DB Row'},
+    {id:'C3', name:'Single-Arm Cable Row'},
+    {id:'C4', name:'Face Pull'},
+    {id:'C5', name:'Reverse Pec Deck / Cable Reverse Fly'},
+    {id:'C6', name:'DB or Machine Shrugs'},
+    {id:'C7', name:'Incline DB Curl'},
+    {id:'C8', name:'Cable Curl — Arm Elevated (Coracobrachialis)'},
+    {id:'C9', name:'Hammer Curl'},
+    {id:'C10', name:'Wrist Curl + Reverse Wrist Curl'},
+    {id:'C11', name:'Dead Hang'}
+  ],
+  D: [
+    {id:'D1', name:'Barbell Hip Thrust'},
+    {id:'D2', name:'Single-Leg Hip Thrust'},
+    {id:'D3', name:'Lying Leg Curl'},
+    {id:'D4', name:'Seated Leg Curl'},
+    {id:'D5', name:'Cable Hip Abduction'},
+    {id:'D6', name:'Single-Leg Glute Cable Kickback'},
+    {id:'D7', name:'Standing Calf Raise'},
+    {id:'D8', name:'Side Plank with Hip Lift'},
+    {id:'D9', name:'Bird Dog'}
+  ]
+};
+
+const deloadWeeks = [5, 10];
+
+function buildTracker() {
+  Object.keys(exercises).forEach(day => {
+    const container = document.getElementById('tracker-' + day);
+    if (!container) return;
+    exercises[day].forEach(ex => {
+      const card = document.createElement('div');
+      card.className = 'exercise-card';
+      let html = `<h4><span><span class="ex-num">${ex.id}</span>${ex.name}</span></h4><div class="tracker-grid">`;
+      for (let w = 1; w <= 12; w++) {
+        const isDeload = deloadWeeks.includes(w);
+        html += `<div class="${isDeload ? 'deload-week' : ''}">
+          <label>Wk ${w}${isDeload ? ' (DL)' : ''}</label>
+          <input type="text" id="tr_${ex.id}_w${w}" placeholder="—" />
+        </div>`;
+      }
+      html += `</div><textarea class="notes-input" id="notes_${ex.id}" placeholder="Notes (form cues, niggles, what worked)..."></textarea>`;
+      card.innerHTML = html;
+      container.appendChild(card);
+    });
+  });
+
+  // Load saved
+  document.querySelectorAll('#tracker input[type="text"], #tracker textarea').forEach(el => {
+    const v = localStorage.getItem('tp_' + el.id);
+    if (v) el.value = v;
+    el.addEventListener('input', () => localStorage.setItem('tp_' + el.id, el.value));
+  });
+}
+
+function toggleCol(header) {
+  header.parentElement.classList.toggle('open');
+}
+
+document.addEventListener('DOMContentLoaded', buildTracker);
+</script>
+
+</body>
+</html>
